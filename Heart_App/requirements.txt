@@ -1,0 +1,33 @@
+crispy-bootstrap5==2024.10
+Django==5.1.2
+django-crispy-forms==2.
+numpy==2.2.2
+pillow==11.0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INCASE YOU DON'T UNDERSTAND WHAT'S SHOWN THERE, HERE'S WHAT YOU SHOULD RUN ON THE TERMINAL:
+Create a virtual environment(Optional):
+pip install Django
+pip install pillow
+pip install crispy-bootstrap5
+pip install django-crispy-forms
+pip install numpy
+
+after that then: python manage.py runserver
+
+ENSURE PYTHON RUNS ON YOUR SYSTEM!!!
+
+
+Enjoy.

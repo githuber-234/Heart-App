@@ -1,0 +1,53 @@
+{% extends "heart_system/base.html" %}
+{% block content %}
+<div class="history">
+    <h2>Patient History</h2>
+    <div>
+      <div>
+        <label for="patientId">Username</label>
+        {{ user.username }}
+      </div>
+    </div>
+  
+    <table class="patient table">
+      <caption>A list of patient's previous assessments</caption>
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Chest Pain Type</th>
+            <th>Resting BP</th>
+            <th>Cholesterol</th>
+            <th>Fasting BS</th>
+            <th>Resting ECG</th>
+            <th>Max HR</th>
+            <th>Exercise Angina</th>
+            <th>OldPeak</th>
+            <th>ST Slope</th>
+            <th>Date Created</th>
+        </tr>
+            <a class="download" href="{% url 'download_assessment' %}">Download</a>
+    </thead>
+    <tbody>
+        {% for assessment in user_assessments %}
+        <tr>
+            <td>{{ assessment.name }}</td>
+            <td>{{ assessment.age }}</td>
+            <td>{{ assessment.sex }}</td>
+            <td>{{ assessment.Chest_Pain_Type }}</td>
+            <td>{{ assessment.restingBP }}</td>
+            <td>{{ assessment.cholesterol }}</td>
+            <td>{{ assessment.fastingBS }}</td>
+            <td>{{ assessment.restingECG }}</td>
+            <td>{{ assessment.maxHR }}</td>
+            <td>{{ assessment.exercise_angina }}</td>
+            <td>{{ assessment.oldpeak }}</td>
+            <td>{{ assessment.st_slope }}</td>
+            <td>{{ assessment.date_created }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+  </div>
+{% endblock content %}

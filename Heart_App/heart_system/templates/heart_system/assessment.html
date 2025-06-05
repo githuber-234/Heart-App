@@ -1,0 +1,101 @@
+{% extends "heart_system/base.html" %}
+{% block content %}
+<form method="POST" action="" class="assess-form">
+  {% csrf_token %}
+    <div class="assess">
+      <h1>Cardiac Assessment Form</h1>
+      
+      <label for="patientId">Patient Username</label>
+      {{ user.username }}
+    </div>
+    <div class="assess">
+      <label for="age">Name</label>
+      <input type="text" id="name" name="name" maxlength="25" placeholder="Input your name" required />
+      <small>Max length of 25 Characters</small>
+    </div>
+    <div class="assess">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="1" max="100" placeholder="Input your age(Years)" required />
+      <small>Range from 1-100</small>
+    </div>
+    <div class="assess">
+      <label for="sex">Sex</label>
+      <select id="sex" name="sex" required>
+        <option value="" disabled selected>Select sex</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+      <small>Biological sex at birth</small>
+    </div>
+    <div class="assess">
+      <label for="chestPainType">Chest Pain Type</label>
+      <select id="chestPainType" name="chestPainType" required>
+        <option value="" disabled selected>Select chest pain type</option>
+        <option value="TA">Typical Angina</option>
+        <option value="ATA">Atypical Angina</option>
+        <option value="NAP">Non-Anginal Pain</option>
+        <option value="ASY">Asymptomatic</option>
+      </select>
+      <small>Type of chest pain experienced by the patient</small>
+    </div>
+    <div class="assess">
+      <label for="restingBP">Resting Blood Pressure</label>
+      <input type="number" id="restingBP" name="restingBP" placeholder="mmHg" min="30" max="300" required />
+      <small>Range from 30-300</small>
+    </div>
+    <div class="assess">
+      <label for="cholesterol">Cholesterol</label>
+      <input type="number" id="cholesterol" name="cholesterol" placeholder="mg/dL" min="50" max="400" required />
+      <small>Range from 50-400</small>
+    </div>
+    <div class="assess">
+      <label for="fastingBS">Fasting Blood Sugar</label>
+      <select id="fastingBS" name="fastingBS" required>
+        <option value="" disabled selected>Select fasting blood sugar</option>
+        <option value="Less than 120">Less than 120 mg/dl</option>
+        <option value="Greater than 120">Greater than 120 mg/dl</option>
+      </select>
+      <small>Blood sugar level after fasting for at least 8 hours</small>
+    </div>
+    <div class="assess">
+      <label for="restingECG">Resting ECG</label>
+      <select id="restingECG" name="restingECG" required>
+        <option value="" disabled selected>Select resting ECG</option>
+        <option value="Normal">Normal</option>
+        <option value="ST">ST-T Wave Abnormality</option>
+        <option value="LVH">Left Ventricular Hypertrophy</option>
+      </select>
+      <small>Results of the electrocardiogram while at rest</small>
+    </div>
+    <div class="assess">
+      <label for="maxHR">Maximum Heart Rate</label>
+      <input type="number" id="maxHR" name="maxHR" min="40" max="240" placeholder="Beats Per Minute(BPM)" required />
+      <small>Range from 40-240</small>
+    </div>
+    <div class="assess">
+      <label for="exerciseAngina">Exercise-Induced Angina</label>
+      <select id="exerciseAngina" name="exerciseAngina" required>
+        <option value="" disabled selected>Select exercise-induced angina</option>
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+      <small>Chest pain caused by exercise</small>
+    </div>
+    <div class="assess">
+      <label for="oldpeak">ST Depression</label>
+      <input type="number" id="oldpeak" name="oldpeak" step="0.1" min="0" max="10" placeholder="millimeters(mm)" required />
+      <small>ST depression induced by exercise relative to rest</small>
+    </div>
+    <div class="assess">
+      <label for="stSlope">ST Slope</label>
+      <select id="stSlope" name="stSlope" required>
+        <option value="" disabled selected>Select ST slope</option>
+        <option value="Up">Upsloping</option>
+        <option value="Flat">Flat</option>
+        <option value="Down">Downsloping</option>
+      </select>
+      <small>The slope of the peak exercise ST segment</small>
+    </div>
+    <button class="assess-btn" type="submit">Submit Assessment</button>
+  </form>
+{% endblock content %}

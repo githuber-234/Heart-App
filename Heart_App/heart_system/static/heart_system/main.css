@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", 'Times New Roman';
+}
+body {
+    background: #fafafa;
+    color: #333333;
+    width: 100%;
+}
+
+.container {
+  margin: 0 auto; 
+  min-height: 70vh;
+  border-radius: 10px;
+  max-width: 1000px; 
+  padding: 20px;
+}
+.cover {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.logo {
+  color: #333333;
+  font-size: 28px;
+}
+span {
+  color: #007bff;
+}
+.home-span {
+  color: #007bff;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+li a:hover {
+  color: #007bff;
+  transition: 0.3s ease;
+}
+
+.register-btn, .login-btn, .logout-btn {
+  border: none;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.right {
+  display: flex;
+}
+
+.logout-btn:hover, .login-btn:hover, .register-btn:hover {
+  color: #007bff;
+}
+
+.assess {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+small {
+  color: #666;
+  font-size: 14px;
+}
+
+.assess-btn {
+  width: 100%;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.assess-btn:hover {
+  background: #0056b3;
+}
+.history-btn {
+  border: none;
+  border-radius: 15px;
+  background: #007bff;
+  margin-top: 20px;
+  padding: 12px 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.chart-container {
+  margin: 40px;
+}
+.chart-contents {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.delete-btn {
+  border: none;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 10px;
+  width: 65px;
+  height: 30px;
+}
+
+.delete-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.download {
+  text-decoration: none;
+  color: #007bff;
+}

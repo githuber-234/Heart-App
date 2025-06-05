@@ -1,0 +1,6 @@
+{% extends "heart_system/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <label for="username">Name: </label><h1>{{ user.username }}</h1>
+    <label for="email">Email: </label><h1>{{ user.email }}</h1>
+{% endblock content %}
